@@ -33,7 +33,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 1000;
     background-color: #0E1010;
     padding: 20px;
@@ -77,7 +76,7 @@
     border-radius: 30px;
     cursor: pointer;
     position: relative;
-    right: 3%;
+    right: 8%;
 
     display: flex;
     align-items: center;
