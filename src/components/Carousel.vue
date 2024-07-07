@@ -34,9 +34,7 @@
     methods: {
       setupCarousel() {
         const track = this.$refs.carouselTrack;
-        const content = this.$refs.carouselContent;
-        const contentWidth = content.offsetWidth;
-  
+        const content = this.$refs.carouselContent;  
         let currentPosition = 0;
         let animationId;
   
@@ -44,7 +42,7 @@
           currentPosition -= 0.7; // Adjust speed here
           track.style.transform = `translateX(${currentPosition}px)`;
   
-          if (currentPosition <= -850) {
+          if (currentPosition <= -900) {
             console.log('Reset position');
             currentPosition = 0; // Reset position
           }
