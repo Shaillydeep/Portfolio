@@ -2,10 +2,10 @@
     <header class="header">
         <nav class="nav">
             <div class="links">
-                <a href="#" class="link">Work</a>
-                <a href="#" class="link">About</a>
-                <a href="#" class="link">Experience</a>
-                <a href="#" class="link">Skills</a>
+                <a href="#Projects" class="link" @click.prevent="scrollToSection('Projects')">Work</a>
+                <a href="#About" class="link" @click.prevent="scrollToSection('About')">About</a>
+                <a href="#Experience" class="link" @click.prevent="scrollToSection('Experience')">Experience</a>
+                <a href="#Skills" class="link" @click.prevent="scrollToSection('Skills')">Skills</a>
             </div>
             <button class="button">
                 <p id="button-text">LET'S TALK </p><img id="arrow" src="../assets/arrow.svg" alt="arrow">
@@ -14,7 +14,29 @@
     </header>
 </template>
 
+<script>
+export default {
+  methods: {
+    scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth', // Enable smooth scrolling
+          block: 'start' // Optional: Scroll to top of the element
+        });
+      }
+    }
+  }
+};
+</script>
+
 <style scoped>
+
+html {
+  scroll-behavior: smooth; 
+}
+
 #button-text {
     margin: 0;
     font-size: 16px;

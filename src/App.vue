@@ -2,12 +2,14 @@
 import Header from './components/Header.vue';
 import Carousel from './components/Carousel.vue';
 import Hero from './components/Hero.vue';
+import Projects from './components/Projects.vue';
 </script>
 
 <template>
   <Header />
   <Hero />
   <Carousel />
+  <Projects />
 
 </template>
 

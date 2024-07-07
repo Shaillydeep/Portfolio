@@ -1,0 +1,209 @@
+.projects {
+    display: flex;
+    padding-top: 100px;
+    gap: 40px ;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.headline {
+    box-sizing: border-box;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+#dot {
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+    background-color: #2cffbf;
+    border-radius: 100%;
+    flex: none;
+    height: 10px;
+    position: relative;
+    width: 10px;
+}
+
+.projects h2 {
+    white-space: pre-wrap;
+    word-break: break-word;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 44px;
+    line-height: 1.2em;
+    text-align: start;
+}
+
+.project-item {
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    gap: 72px;
+    height: min-content;
+    justify-content: space-evenly;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+}
+
+.project-list {
+    box-sizing: border-box;
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 100px;
+    height: min-content;
+    justify-content: flex-start;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.project-desc {
+    box-sizing: border-box;
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* gap: 72px; */
+    height: min-content;
+    justify-content: center;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.project-desc .project-year {
+    border-width: 1px;
+    border-color: #2b2d2d;
+    border-style: solid;
+    align-items: center;
+    background-color: #1d1d1d;
+    border-radius: 30px;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: min-content;
+    justify-content: center;
+    overflow: visible;
+    position: relative;
+    width: min-content;
+    padding-inline: 12px;
+    height: 34px;
+    margin-bottom: 36px;
+}
+
+.project-name {
+    font-family: "DM Sans", "DM Sans Placeholder", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -.03em;
+    line-height: 1.3em;
+    color:  #ffffff;
+    text-align: start;
+    margin: 0px;
+}
+
+.desc {
+    font-family: "DM Sans", "DM Sans Placeholder", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    line-height: 1.6em;
+    color: #aeb2ba;
+    text-decoration: none;
+    text-transform: none;
+    text-align: start;
+    
+}
+
+.project-info {
+    margin-top: 36px;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.info-item {
+    border-bottom-width: 1px;
+    border-color: var(--token-d4418377-db40-4eda-a861-37d87ab2ca11, #2b2d2d);
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-style: solid;
+    border-top-width: 0px;
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: min-content;
+    justify-content: space-between;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+}
+
+.item {
+    font-family: "DM Sans", "DM Sans Placeholder", sans-serif;
+    font-size: 15px;
+    letter-spacing: -0.03em;
+    line-height: 1.4em;
+    color: #aeb2ba 
+}
+
+.item-desc {
+    font-family: "DM Sans", "DM Sans Placeholder", sans-serif;
+    font-size: 15px;
+    letter-spacing: -0.03em;
+    line-height: 1.4em;
+    text-align: right;
+    color: #fff;
+    max-width: 60%;
+}
+
+.project-img img {
+    width: 600px;
+    height: 400px;
+    border-radius: 12px;
+
+}
