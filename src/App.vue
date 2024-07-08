@@ -21,18 +21,22 @@ import Footer from './components/Footer.vue';
 </template>
 
 <style>
+body {
+  background-color: #0E1010;
+  margin: 0;
+  color: #ffffff;
+
+}
 
 #app {
-  max-width: 72vw;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  background-color: #0E1010;
-  color: #ffffff;
-  font-family: 'DM Sans','DM Sans placeholder', sans-serif;
+  padding: 2rem 1rem;
+  text-align: left;
+  font-family: 'DM Sans', 'DM Sans placeholder', sans-serif;
   position: absolute;
   top: 0px;
   padding-inline: 9%;
+  min-height: 100vh;
 }
-
 </style>
