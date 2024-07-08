@@ -16,9 +16,6 @@ import Pill from './Pill.vue'
                         <span>{{ experience.company }}</span>
                     </h3>
                     <div class="duration-arrow">
-                        <!-- <div class="pill">
-                        <span class="duration">{{ experience.duration }}</span>
-                    </div> -->
                         <Pill :text="experience.duration" />
                         <span class="arrow" :class="{ 'open': experience.isOpen }">▼</span>
                     </div>
@@ -178,33 +175,4 @@ export default {
     list-style-type: disc;
     margin-bottom: 8px;
 }
-
-/* .pill {
-    border-bottom-width: 1px;
-    border-color: #2b2d2d;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-style: solid;
-    border-top-width: 1px;
-    align-content: center;
-    align-items: center;
-    background-color: #1d1d1d;
-    border-radius: 30px;
-    display: flex;
-    flex: none;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 4px;
-    height: min-content;
-    justify-content: center;
-    overflow: visible;
-    padding: 8px 14px;
-    position: relative;
-}
-
-.pill span {
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-} */
 </style>

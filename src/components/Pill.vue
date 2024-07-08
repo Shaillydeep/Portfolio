@@ -38,6 +38,7 @@ export default {
     overflow: visible;
     padding: 8px 14px;
     position: relative;
+    width: max-content;
 }
 
 .pill-text {
