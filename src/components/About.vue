@@ -64,8 +64,6 @@ headline {
     max-width: 1200px;
 }
 
-
-
 .about-img img {
     border-radius: 50%;
     height: 81px;

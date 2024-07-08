@@ -4,6 +4,7 @@ import Carousel from './components/Carousel.vue';
 import Hero from './components/Hero.vue';
 import Projects from './components/Projects.vue';
 import About from './components/About.vue';
+import Experience from './components/Experience.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import About from './components/About.vue';
   <Carousel />
   <Projects />
   <About />
+  <Experience />
 </template>
 
 <style>
