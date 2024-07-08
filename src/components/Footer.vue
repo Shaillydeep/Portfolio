@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer id="Footer">
         <div class="container">
             <div class="contact-info">
                 <a href="mailto:shaillydeep999@gmail.com" class="email">
@@ -36,6 +36,7 @@ footer {
     /* Use shorthand */
     opacity: 1;
     /* Usually not necessary unless you're animating */
+    margin-top: 6rem;
 }
 
 .container {
@@ -71,6 +72,7 @@ footer {
     color: white;
     text-decoration: none;
     transition: transform 0.2s ease, color 0.2s ease;
+    font-size: 20px;
     /* Add transition for smoothness */
 }
 

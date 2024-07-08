@@ -7,7 +7,7 @@
         <a href="#Experience" class="link" @click.prevent="scrollToSection('Experience')">Experience</a>
         <a href="#Skills" class="link" @click.prevent="scrollToSection('Skills')">Skills</a>
       </div>
-      <button class="button" @click="scrollToSection('contact')">
+      <button class="button" @click="scrollToSection('Footer')">
         <span class="button-text">LET'S TALK</span>
         <img src="../assets/arrow.svg" alt="arrow" class="arrow">
       </button>
@@ -21,6 +21,7 @@ export default {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
       if (element) {
+        console.log(element)
         element.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
