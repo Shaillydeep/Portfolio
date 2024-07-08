@@ -1,9 +1,14 @@
+<script setup>
+
+import Headline from './Headline.vue';
+
+</script>
+
+
 <template>
     <div class="projects" id="Projects">
-        <div class='headline'>
-            <div id='dot'></div>
-            <h2>Projects</h2>
-        </div>
+        <Headline headline = "Projects" />
+
         <div class="project-list">
             <div class="project-item">
 

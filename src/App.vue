@@ -3,6 +3,7 @@ import Header from './components/Header.vue';
 import Carousel from './components/Carousel.vue';
 import Hero from './components/Hero.vue';
 import Projects from './components/Projects.vue';
+import About from './components/About.vue';
 </script>
 
 <template>
@@ -10,7 +11,7 @@ import Projects from './components/Projects.vue';
   <Hero />
   <Carousel />
   <Projects />
-
+  <About />
 </template>
 
 <style>
