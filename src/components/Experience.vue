@@ -75,7 +75,7 @@ export default {
 
 <style scoped>
 .arrow {
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .arrow.open {
@@ -84,7 +84,7 @@ export default {
 
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-    transition: all 0.3s ease-out;
+    transition: all 0.4s ease-out;
     /* Adjust transition duration and easing as needed */
 }
 
