@@ -61,7 +61,7 @@
   
   <style scoped>
 .image-carousel {
-  margin-top: 72px;
+/*   margin-top: 72px;*/
   width: 100%;
   overflow: hidden;
   position: relative; /* To position the gradient */
