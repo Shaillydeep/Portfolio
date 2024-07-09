@@ -43,7 +43,6 @@
           track.style.transform = `translateX(${currentPosition}px)`;
   
           if (currentPosition <= -900) {
-            console.log('Reset position');
             currentPosition = 0; // Reset position
           }
   

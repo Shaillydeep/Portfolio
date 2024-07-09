@@ -42,6 +42,6 @@ export default {
 
 <style>
 #app {
-  margin-inline: 10em;
+  margin-inline: 8em;
 }
 </style>
