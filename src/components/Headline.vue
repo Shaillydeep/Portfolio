@@ -20,23 +20,17 @@ export default {
 <style>
 
 .headline {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
     box-sizing: border-box;
-    align-content: center;
     align-items: center;
     display: flex;
-    flex: none;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 20px;
     height: min-content;
     justify-content: flex-start;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    width: 100%;
+    height: 4rem;
 }
 
 #dot {
@@ -51,18 +45,10 @@ export default {
 }
 
 .headline h2 {
-    white-space: pre-wrap;
-    word-break: break-word;
-    word-wrap: break-word;
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: sans-serif;
-    font-weight: 400;
-    color: #fff;
-    font-size: 44px;
-    line-height: 1.2em;
-    text-align: start;
+    color: white;
+    font-size: 2.75rem;
+    line-height: 3.3rem;
+    font-weight: 500;
 }
 
 </style>

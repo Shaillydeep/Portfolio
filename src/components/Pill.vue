@@ -9,7 +9,6 @@ export default {
     name: 'Pill',
     props: {
         text: {
-            type: String,
             required: true
         }
     }
@@ -41,12 +40,4 @@ export default {
     width: max-content;
 }
 
-.pill-text {
-    font-size: 16px;
-    color: #fff;
-    font-family: "DM Sans", "DM Sans Placeholder", sans-serif;
-    font-weight: 500;
-    letter-spacing: -.03em;
-    line-height: 1.3em;
-}
 </style>

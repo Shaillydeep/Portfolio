@@ -1,17 +1,27 @@
 <template>
   <header class="header">
-    <nav class="nav container">
-      <div class="links">
-        <a href="#Projects" class="link" @click.prevent="scrollToSection('Projects')">Work</a>
-        <a href="#About" class="link" @click.prevent="scrollToSection('About')">About</a>
-        <a href="#Experience" class="link" @click.prevent="scrollToSection('Experience')">Experience</a>
-        <a href="#Skills" class="link" @click.prevent="scrollToSection('Skills')">Skills</a>
-      </div>
-      <button class="button" @click="scrollToSection('Footer')">
-        <span class="button-text">LET'S TALK</span>
-        <img src="../assets/arrow.svg" alt="arrow" class="arrow">
-      </button>
-    </nav>
+    <div class="container">
+      <nav class="nav">
+        <div class="links">
+          <a href="#Projects" class="link" @click.prevent="scrollToSection('Projects')">
+            Work
+          </a>
+          <a href="#About" class="link" @click.prevent="scrollToSection('About')">
+            About
+          </a>
+          <a href="#Experience" class="link" @click.prevent="scrollToSection('Experience')">
+            Experience
+          </a>
+          <a href="#Skills" class="link" @click.prevent="scrollToSection('Skills')">
+            Skills
+          </a>
+        </div>
+        <button class="button" @click="scrollToSection('Footer')">
+          <span class="button-text">LET'S TALK</span>
+          <img src="../assets/arrow.svg" alt="arrow" class="arrow">
+        </button>
+      </nav>
+    </div>
   </header>
 </template>
 
@@ -21,7 +31,6 @@ export default {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
       if (element) {
-        console.log(element)
         element.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
@@ -34,99 +43,71 @@ export default {
 
 <style scoped>
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #0E1010;
+  padding: 1em 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1em;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 1rem;
-  /* Use rem for consistent spacing */
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .links {
   display: flex;
-  align-items: center;
-  gap: 35px;
-  margin-left: 2rem;
-
+  flex-grow: 1;
+  justify-content: center;
+  gap: 2em;
+  /* Space between links */
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .link {
   text-decoration: none;
-  color: #aeb2ba;
-  font-size: 1rem;
-  font-weight: 400;
-  transition: color 0.2s ease;
-  /* Add a smooth color transition */
+  color: #AEB2BA;
+  transition: color 0.3s ease;
 }
 
 .link:hover {
-  color: #fff;
-  /* Change link color on hover */
+  color: white;
 }
 
 .button {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
   background-color: #1D1D1D;
-  color: #fff;
-  border: none;
+  color: white;
+  gap: 0.8em;
   border-radius: 30px;
+  padding: 0.5em 1em;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  /* Smooth transition for button */
-}
 
-.button:hover {
-  background-color: #333;
-  /* Darken button color on hover */
-}
-
-.button-text {
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  margin-right: 0.5rem;
 }
 
 .arrow {
-  width: 24px;
-  height: 24px;
+  width: 2.2em;
+  height: 2.2em;
+
 }
 
-/* Media Query for Smaller Screens */
+/* Mobile Responsiveness (Example) */
 @media (max-width: 768px) {
-
-  /* Adjust breakpoint as needed */
   .nav {
     flex-direction: column;
-    /* Stack navigation vertically */
+    /* Stack logo and links */
     align-items: flex-start;
   }
 
   .links {
-    margin-bottom: 1rem;
-    /* Add spacing between links and button */
     flex-direction: column;
-    /* Stack links vertically */
-  }
-
-  .button {
-    margin-left: 0;
-    /* Reset margin for button */
+    gap: 1em;
+    margin-top: 1em;
   }
 }
 </style>

@@ -1,136 +1,126 @@
 <template>
-    <div class="hero">
-
-        <div class="hero-content">
-            <img src="../assets/hero.png" alt="Shailly Deep">
-            <div class="text-content">
-                <h1>Shailly Deep</h1>
-                <div class="dot"></div>
-                <p>Currently looking for opportunities</p>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="../assets/hero.png" alt="Shailly Deep" class="hero-image">
+                <div class="text-content">
+                    <h1>Shailly Deep</h1>
+                    <div class="sub-text">
+                        <span class="dot"></span>
+                        <p>Currently looking for opportunities</p>
+                    </div>
+                </div>
             </div>
+
+            <p class="hero-desc">
+                I'm an analyst based in New Delhi, India. <br>
+                Proficient in tools like Python, SQL, and advanced Excel.
+            </p>
+
+            <p class="hero-fun-fact">
+                My other skills also include basic Front-end Web Development using
+                React, Vue. <br>
+                Fun Fact: This website is also built using Vue.
+            </p>
         </div>
-
-            <p class="hero-desc">I'm an analyst based in New Delhi, India. <br>Proficient in tools like Python, SQL and advanced Excel.</p>
-
-            <p id="a">My other skills also include basic Front-end Web Development using React, Vue. <br>Fun Fact: This website is also built using Vue.</p>
-
-
-    </div>
+    </section>
 </template>
-
 
 <style scoped>
 .hero {
-    padding: 20px;
-    text-align: left;
-    padding-top: 11%;
+    padding: 3em 0;
+    margin-bottom: 1rem;
+}
+
+.container {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap:36px;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 .hero-content {
     display: flex;
-    align-items: center;
-    /* Vertically align items */
-    justify-content: flex-start;
-    /* Horizontally center content */
-    max-height: 100px;
+    align-items: flex-end;
+    gap: 2em;
+    /* Space between image and text */
 }
 
-.hero-content img {
+.hero-image {
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    height: 81px;
-    width: 81px;
-    margin-right: 20px;
-
-    /* Space between image and text */
+    /* Make it a circle */
+    object-fit: cover;
+    /* Ensure image scales nicely */
 }
 
 .text-content {
     text-align: left;
-    /* Align text content to the left */
 }
 
 .text-content h1 {
-    font-family: "DM Sans", "DM Sans Placeholder", sans-serif;
-    font-size: 43px;
+    line-height: 3.25rem;
+    font-size: 2.6rem;
+    margin-bottom: 0;
     font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 120%;
-    margin-bottom: 0px;
-    /* Reduced margin */
 }
 
-.text-content p {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    line-height: 90%;
-    color: #aeb2ba;
-    margin-top: 0;
-    /* Adjusted margin */
-    position: relative;
-    top: -13.5px;
-    /* Adjusted vertical alignment */
-    left: 18px;
+.sub-text {
+    display: flex;
+    align-items: center;
 }
 
-.text-content .dot {
-    font-size: 12px;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    -webkit-font-smoothing: inherit;
-    aspect-ratio: 1 / 1;
-    background-color: #2cffbf;
-    border-radius: 100%;
-    flex: none;
-    height: 6px;
-    position: relative;
-    width: 6px;
+.sub-text .dot {
     display: inline-block;
-    /* Allow it to be inline with text */
-    margin-bottom: -3px;
-    /* Adjust vertical alignment as needed */
+    width: 6px;
+    height: 6px;
+    background-color: #2cffbf;
+    border-radius: 50%;
+    margin: 0.2em 0.6em 0.2em 0em;
 }
 
-
-.hero .hero-desc {
-    font-size: 44px;
+.sub-text p {
+    font-size: 0.9rem;
+    line-height: 1rem;
     font-weight: 400;
-    letter-spacing: -0.03em;
-    line-height: 150%;
-    color: #fff;
-    white-space: pre-wrap;
-    word-break: break-word;
-    word-wrap: break-word;
-    box-sizing: border-box;
-    -webkit-font-smoothing: inherit;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Inter', 'Inter Placeholder', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.2em;
-    text-align: start;
-    
+    color: #aeb2ba;
+    margin: 0;
+    /* Reset margin for better control */
 }
 
-#a {
-    white-space: pre-wrap;
-    word-break: break-word;
-    word-wrap: break-word;
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Inter', 'Inter Placeholder', sans-serif;
-    font-style: normal;
+.hero-desc{
+    font-size: 2.75rem;
+    line-height: 3.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.hero-fun-fact {
+    color: #aeb2ba;
+    font-size: 1.25rem;
+    line-height: 2rem;
     font-weight: 400;
-    color:  #aeb2ba;
-    font-size: 20px;
-    line-height: 1.5em;
-    text-align: start;
+    margin: 0;
+}
+
+/* Mobile Responsiveness (Example) */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        /* Stack image and text vertically */
+        align-items: center;
+        /* Center horizontally */
+    }
+
+    .hero-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .text-content h1 {
+        font-size: 2em;
+    }
 }
 </style>

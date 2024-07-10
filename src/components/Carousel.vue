@@ -43,7 +43,6 @@
           track.style.transform = `translateX(${currentPosition}px)`;
   
           if (currentPosition <= -900) {
-            console.log('Reset position');
             currentPosition = 0; // Reset position
           }
   
@@ -61,7 +60,7 @@
   
   <style scoped>
 .image-carousel {
-  margin-top: 72px;
+/*   margin-top: 72px;*/
   width: 100%;
   overflow: hidden;
   position: relative; /* To position the gradient */
