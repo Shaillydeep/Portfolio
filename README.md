@@ -10,13 +10,12 @@ This is the source code for my personal portfolio website, built with [Vue.js](h
 
 ## ✨ Features
 
-- **Responsive Design:**  Adapts seamlessly to different screen sizes (desktop, tablet, mobile).
-- **Interactive UI:** [List any interactive elements or animations, e.g., smooth scrolling, animated transitions].
+- **Responsive Design:**  
+- **Interactive UI:** 
 ## 🛠️ Technologies Used
 
 - **Front-end:**
   - Vue.js 3
-  - [Other libraries or frameworks: Vue Router, Vuex (if used)]
   - HTML5
   - CSS3 
   - JavaScript (ES6+)
@@ -24,7 +23,7 @@ This is the source code for my personal portfolio website, built with [Vue.js](h
 
 ## 💻 Getting Started
 
-These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes. 
+These instructions will help you get a copy of the project up and running on your local machine. 
 
 ### Prerequisites
 
@@ -34,12 +33,12 @@ These instructions will help you get a copy of the project up and running on you
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git 
+   git clone https://github.com/Shaillydeep/Portfolio.git 
    ```
 
 2. **Navigate to the Project Directory:**
    ```bash
-   cd your-repo-name
+   cd Portfolio
    ```
 
 3. **Install Dependencies:**
