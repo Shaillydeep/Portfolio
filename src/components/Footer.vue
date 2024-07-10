@@ -1,17 +1,26 @@
 <template>
     <footer id="Footer">
         <div class="container">
-            <div class="contact-info">
-                <a href="mailto:shaillydeep999@gmail.com" class="email">
-                    shaillydeep999@gmail.com
-                </a>
+            <div class="footer-content">
+                <div class="contact">
+                    <a href="mailto:shaillydeep999@gmail.com" class="email">
+                        shaillydeep999@gmail.com
+                    </a>
+                </div>
+                <div class="links">
+                    <p class="links-heading">Useful Links</p>
+                    <a href="#Projects" @click.prevent="scrollToSection('Projects')">Work</a> 
+                    <a href="#About" @click.prevent="scrollToSection('About')">About</a>
+                    <a href="#Experience" @click.prevent="scrollToSection('Experience')">Experience</a>
+                </div>
+                <div class="social">
+                    <p class="social-heading">Connect with me</p>
+                    <a href="https://github.com/Shaillydeep" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/shailly-deep-481aa42b2/" target="_blank"
+                        rel="noopener">LinkedIn</a>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://github.com/Shaillydeep" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://www.linkedin.com/in/shailly-deep-481aa42b2/" target="_blank"
-                    rel="noopener">LinkedIn</a>
-            </div>
-            <p class="copyright">© {{ currentYear }} Vue App. <br> All rights reserved.</p>
+            <p class="copyright">© {{ currentYear }} Vue App. All rights reserved.</p>
         </div>
     </footer>
 </template>
@@ -23,87 +32,98 @@ export default {
             currentYear: new Date().getFullYear(),
         };
     },
+    methods: {
+        scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    }
 };
 </script>
 
 <style scoped>
-footer {
-    background-color: #0e1010;
-    padding: 30px 0;
-    width: 100%;
+#Footer {
+    padding-top: 6rem;
+    padding-bottom: 0.2rem;
     text-align: center;
-    border-top: 1px solid rgb(43, 45, 45);
-    /* Use shorthand */
-    opacity: 1;
-    /* Usually not necessary unless you're animating */
-    margin-top: 6rem;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allow wrapping on smaller screens */
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    /* Optional: Limit container width for large screens */
     margin: 0 auto;
-    /* Center the container */
-    padding: 0 20px;
-    /* Add some horizontal padding */
+    width: -webkit-fill-available;
 }
 
-.contact-info {
-    order: 1;
-    /* Control order on smaller screens */
-    margin-bottom: 10px;
-    /* Add spacing */
-}
-
-.social-links {
+.footer-content {
     display: flex;
-    gap: 20px;
-    /* Consistent spacing */
-    order: 2;
-    margin-bottom: 10px;
+    flex-wrap: nowrap;
+    gap: 6rem;
+    margin-bottom: 30px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
-.social-links a {
-    color: white;
-    text-decoration: none;
-    transition: transform 0.2s ease, color 0.2s ease;
-    font-size: 20px;
-    /* Add transition for smoothness */
-}
-
-.social-links a:hover {
-    transform: translateY(-1.5px);
-    /* Slight upward movement */
-    color: #aeb2ba;
-    /* Change color on hover */
+.contact,
+.links,
+.social {
+    flex: 1 1 200px;
+    /* Each section takes up equal space, min-width 200px */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
 .email {
-    font-size: 40px;
+    color: #aeb2ba;
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 1rem;
 }
 
 .email:hover {
+    color: #f0f0f0;
     text-decoration: underline;
-    color: #aeb2ba;
-    /* Simple underline effect */
 }
 
-.copyright {
-    order: 3;
-    font-size: 0.9rem;
-    /* Smaller font size for copyright */
-    color: #888;
-    /* Lighter color for copyright */
+.links a {
+    display: block;
 }
 
 a {
-    color: white;
+    color: #aeb2ba;
     text-decoration: none;
-    /* Consider adding a hover effect */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #f0f0f0;
+}
+
+.copyright {
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* Responsive Styles (Example) */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        /* Stack sections vertically */
+        align-items: center;
+    }
+
+    .contact,
+    .links,
+    .social {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
 </style>
