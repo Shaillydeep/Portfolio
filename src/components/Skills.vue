@@ -2,7 +2,7 @@
     <section class="skills" id="Skills">
         <div class="skills-head">
             <Headline headline="Skills" />
-            <p>Here, I showcase the Technologies I work with and the programming languages I master.</p>
+            <p>Here, I showcase the Technologies I work with.</p>
         </div>
 
         <div class="skill-pills">
@@ -54,6 +54,7 @@ export default {
     text-align: left;
     flex-direction: row;
     gap: 4rem;
+    justify-content: space-between;
 }
 
 .skills-head {

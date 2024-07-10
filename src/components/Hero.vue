@@ -28,7 +28,7 @@
 
 <style scoped>
 .hero {
-    padding: 3em 0;
+    padding: 4em 0;
     margin-bottom: 1rem;
 }
 
