@@ -2,7 +2,7 @@
 
 ## 👋 Introduction
 
-This is the source code for my personal portfolio website, built with [Vue.js](https://vuejs.org/) ([Vue 3](https://vuejs.org/guide/introduction.html) recommended). It showcases my skills, projects, and experience as a [Your Profession/Area of Expertise, e.g., Front-end Developer, Data Analyst]. 
+This is the source code for my personal portfolio website, built with [Vue.js](https://vuejs.org/) ([Vue 3](https://vuejs.org/guide/introduction.html) recommended). It showcases my skills, projects, and experience as a Front-end Developer, Data Analyst. 
 
 ## 🚀 Live Demo
 
