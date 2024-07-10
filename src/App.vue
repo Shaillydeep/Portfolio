@@ -7,10 +7,12 @@ import About from './components/About.vue';
 import Experience from './components/Experience.vue';
 import Skills from './components/Skills.vue';
 import Footer from './components/Footer.vue';
+import ToTop from './components/ToTop.vue';
 </script>
 
 <template>
     <Header />
+    <ToTop />
     <main>
       <div class="container">
         <Hero />
