@@ -119,7 +119,6 @@ export default{
             powerBI,
             excel,
             react
-        ],
-        imageCount: 4,
+        ]
     }
 }
