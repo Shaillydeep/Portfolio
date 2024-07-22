@@ -1,6 +1,7 @@
 <script setup>
 import Headline from './Headline.vue'
 import Pill from './Pill.vue'
+import data from '../content/data';
 </script>
 
 <template>
@@ -33,8 +34,6 @@ import Pill from './Pill.vue'
 </template>
 
 <script>
-import Headline from './Headline.vue';
-import Pill from './Pill.vue';
 
 export default {
     components: {
@@ -43,32 +42,7 @@ export default {
     },
     data() {
         return {
-            experiences: [{
-                role: 'Trainee Data Analyst',
-                company: 'DRDO - INMAS',
-                duration: 'April 2024 - May 2024',
-                responsibilities: [
-                    'Utilized tools (Excel, Python & SQL) to clean, manipulate, and analyze data sets.',
-                    'Utilized programming languages and database tools for data manipulation, filtration, and analysis tasks. ',
-                    'Assisted in the development of data models and visualizations.',
-                    'Leveraged pivot tables and data filtering techniques in Excel to identify key trends.',
-
-                ],
-                isOpen: false // Add isOpen property to control visibility
-            },
-            {
-                role: 'Data Analyst Intern',
-                company: 'IBM - CSRBOX',
-                duration: 'June 2023 - May 2023',
-                responsibilities: [
-                    'Analyzed data sets using Python (pandas & plots) to identify trends and patterns.',
-                    'Applied data cleaning techniques to ensure data quality and consistency.',
-                    'Learned and implemented machine learning algorithms for predictive analytics.',
-                    'Received mentorship IBM Experts on data analysis and model building.',
-                ],
-                isOpen: false
-            },
-            ],
+            experiences: data.experience,
         };
     },
     methods: {

@@ -1,11 +1,13 @@
+<script setup>
+import data from '../content/data';
+</script>
+
 <template>
     <footer id="Footer">
         <div class="container">
             <div class="footer-content">
                 <div class="contact">
-                    <a href="mailto:shaillydeep999@gmail.com" class="email">
-                        shaillydeep999@gmail.com
-                    </a>
+                    <a :href="links.mailLink" class="email">{{ links.mail }}</a>
                 </div>
                 <div class="links">
                     <p class="links-heading">Useful Links</p>
@@ -15,8 +17,8 @@
                 </div>
                 <div class="social">
                     <p class="social-heading">Connect with me</p>
-                    <a href="https://github.com/Shaillydeep" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://www.linkedin.com/in/shailly-deep-481aa42b2/" target="_blank"
+                    <a :href="links.github" target="_blank" rel="noopener">GitHub</a>
+                    <a :href="links.linkedin" target="_blank"
                         rel="noopener">LinkedIn</a>
                 </div>
             </div>
@@ -30,6 +32,7 @@ export default {
     data() {
         return {
             currentYear: new Date().getFullYear(),
+            links: data.links,
         };
     },
     methods: {

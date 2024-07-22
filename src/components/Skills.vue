@@ -1,3 +1,9 @@
+<script setup>
+import Headline from './Headline.vue';
+import Pill from './Pill.vue';
+import data from '../content/data';
+</script>
+
 <template>
     <section class="skills" id="Skills">
         <div class="skills-head">
@@ -12,9 +18,6 @@
 </template>
 
 <script>
-import Headline from './Headline.vue';
-import Pill from './Pill.vue';
-
 export default {
     components: {
         Headline,
@@ -22,21 +25,7 @@ export default {
     },
     data() {
         return {
-            skills: [
-                'Python',
-                'SQL',
-                'Power BI',
-                'Excel',
-                'Data Wrangling, Analysis & Visualization',
-                'Predictive Modelling',
-                'ReactJs',
-                'VueJs',
-                'CSS',
-                'HTML',
-                'Computer Vision',
-                'Machine Learning',
-                'Google Cloud Platform',
-            ],
+            skills: data.skills,
         };
     },
 };
