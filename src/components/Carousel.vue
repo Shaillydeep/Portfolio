@@ -1,31 +1,21 @@
-<template>
-    <div class="image-carousel">
-      <div class="carousel-track" ref="carouselTrack">
-        <div class="carousel-content" ref="carouselContent">
-          <img src="../assets/powerbi.png" alt="PowerBI">
-          <img src="../assets/mysql.png" alt="MySQL">
-          <img src="../assets/excel.png" alt="Excel">
-          <img src="../assets/react.png" alt="React">
-          <img src="../assets/python.png" alt="Python">
-        </div>
-        <!-- Duplicate content for seamless loop -->
-        <div class="carousel-content" ref="carouselContent">
-          <img src="../assets/powerbi.png" alt="PowerBI">
-          <img src="../assets/mysql.png" alt="MySQL">
-          <img src="../assets/excel.png" alt="Excel">
-          <img src="../assets/react.png" alt="React">
-          <img src="../assets/python.png" alt="Python">
+<script setup>
+import data from '../content/data';
+</script>
 
-          <img src="../assets/powerbi.png" alt="PowerBI">
-          <img src="../assets/mysql.png" alt="MySQL">
-          <img src="../assets/excel.png" alt="Excel">
-          <img src="../assets/react.png" alt="React">
-          <img src="../assets/python.png" alt="Python">
-        </div>
+<template>
+  <div class="image-carousel">
+    <div class="carousel-track" ref="carouselTrack">
+      <div class="carousel-content" ref="carouselContent">
+        <img v-for="image in carousel.images" :src="image" />
+      </div>
+      <!-- Duplicate content for seamless loop -->
+      <div class="carousel-content">
+        <img v-for="image in carousel.images" :src="image" />
+        <img v-for="image in carousel.images" :src="image" />
       </div>
     </div>
-  </template>
-  
+  </div>
+</template>
   <script>
   export default {
     mounted() {
@@ -34,15 +24,18 @@
     methods: {
       setupCarousel() {
         const track = this.$refs.carouselTrack;
-        const content = this.$refs.carouselContent;  
+        const carouselContent = this.$refs.carouselContent;
+        const imageCount = carouselContent.querySelectorAll('img').length;
+        console.log('Number of images:', imageCount);
         let currentPosition = 0;
         let animationId;
-  
+        const x = -180 * imageCount;
+
         const animate = () => {
           currentPosition -= 0.7; // Adjust speed here
           track.style.transform = `translateX(${currentPosition}px)`;
   
-          if (currentPosition <= -900) {
+          if (currentPosition <= x) {
             currentPosition = 0; // Reset position
           }
   
@@ -54,6 +47,11 @@
       beforeUnmount() {
         cancelAnimationFrame(this.animationId);
       },
+    },
+    data() {
+      return {
+        carousel: data.carousel,
+      };
     },
   };
   </script>

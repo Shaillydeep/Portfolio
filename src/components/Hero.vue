@@ -1,30 +1,41 @@
+<script setup>
+import data from '../content/data';
+</script>
+
 <template>
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <img src="../assets/hero.png" alt="Shailly Deep" class="hero-image">
                 <div class="text-content">
-                    <h1>Shailly Deep</h1>
+                    <h1>{{ hero.textContent }}</h1>
                     <div class="sub-text">
                         <span class="dot"></span>
-                        <p>Currently looking for opportunities</p>
+                        <p>{{ hero.subText }}</p>
                     </div>
                 </div>
             </div>
+            <div class="hero-desc">
+                <p class="desc" v-for="desc in hero.desc">{{ desc }}</p>
+            </div>
 
-            <p class="hero-desc">
-                I'm an analyst based in New Delhi, India. <br>
-                Proficient in tools like Python, SQL, and advanced Excel.
-            </p>
-
-            <p class="hero-fun-fact">
-                My other skills also include basic Front-end Web Development using
-                React, Vue. <br>
-                Fun Fact: This website is also built using Vue.
-            </p>
+            <div class="hero-fun-fact">
+                <p class="desc" v-for="fact in hero.funFact">{{ fact }}</p>
+            </div>
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    name: 'Hero',
+    data() {
+        return {
+            hero: data.hero,
+        };
+    },
+};
+</script>
 
 <style scoped>
 .hero {
@@ -94,6 +105,10 @@
     font-size: 2.75rem;
     line-height: 3.5rem;
     font-weight: 500;
+    margin: 0;
+}
+
+.desc {
     margin: 0;
 }
 

@@ -1,3 +1,8 @@
+<script setup>
+import Headline from './Headline.vue';
+import data from '../content/data';
+</script>
+
 <template>
     <section class="about" id="About">
         <Headline headline="About" />
@@ -7,29 +12,10 @@
             </div>
             <div class="about-text">
                 <div class="greeting">
-                    <h3>
-                        Hi, I'm Shailly!
-                        <br>
-                        A data analyst by day, a curious learner by night.
-                        I'm always expanding my skillset and exploring
-                        new ways to leverage data for good.
-                    </h3>
+                    <h3 v-for="greet in about.greeting">{{ greet }}</h3>
                 </div>
                 <div class="about-details">
-                    <p>
-                        Hey there! I'm Shailly Deep, an aspiring Data Analyst based in Delhi. I have recently completed my
-                        B.Tech Computer Science Engineering degree from SRM University. I have 8 months of work experience.
-                    </p>
-                    <p>
-                        I leverage my knowledge of data manipulation, analysis (using tools like SQL and Python),
-                        and visualization and ChatGPT to tell compelling data stories.
-                        I love to find new and interesting hidden patterns and turning data into solutions.
-                    </p>
-                    <p>
-                        I also like tinkering with other technologies & fields like computer vision, web development
-                        frameworks broadening my analytical toolkit to tackle real-world challenges from diverse
-                        perspectives.
-                    </p>
+                    <p v-for="detail in about.details">{{ detail }}</p>
                 </div>
             </div>
         </div>
@@ -37,11 +23,14 @@
 </template>
 
 <script>
-import Headline from './Headline.vue';
-
 export default {
     components: {
         Headline,
+    },
+    data() {
+        return {
+            about: data.about,
+        };
     },
 };
 </script>
