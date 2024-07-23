@@ -70,9 +70,13 @@ export default {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .skill-pills {
-        justify-content: center;
-        /* Center pills on smaller screens */
+    .skills{
+        flex-direction: column;
+    }
+
+    .skill-pills{
+        width: auto;
+        justify-content: flex-start;
     }
 }
 </style>

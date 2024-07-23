@@ -7,3 +7,13 @@ body {
     font-family: 'DM Sans', sans-serif;
     line-height: 1.5rem; 
 }
+
+@media (max-width: 768px) {
+    /* Styles for mobile screens */
+    /* Add your mobile-specific styles here */
+    /* For example: */
+    body {
+        width: 100%;
+    }
+}
+

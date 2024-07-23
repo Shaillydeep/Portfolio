@@ -91,7 +91,7 @@ export default {
 
 }
 
-p {
+.about-details p{
     color: #aeb2ba;
     font-size: 1rem;
     line-height: 1.6;
@@ -106,18 +106,28 @@ p {
     .about-content {
         flex-direction: column;
         /* Stack image and text vertically */
-        text-align: center;
         /* Center text on smaller screens */
     }
 
     .about-image {
         max-width: 200px;
-        margin: 0 auto 20px auto;
+        margin: 0rem 2rem;
         /* Center image */
     }
 
-    .greeting h3 {
-        font-size: 2rem;
+    .about-text{
+        flex-direction: column;
+        gap: 2rem;
     }
+
+    .greeting{
+        width: auto;
+    }
+
+    .greeting h3 {
+        font-size: 2.5rem;
+        line-height: 2.6rem;
+    }
+
 }
 </style>

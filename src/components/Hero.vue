@@ -123,7 +123,7 @@ export default {
 /* Mobile Responsiveness (Example) */
 @media (max-width: 768px) {
     .hero-content {
-        flex-direction: column;
+        flex-direction: row;
         /* Stack image and text vertically */
         align-items: center;
         /* Center horizontally */

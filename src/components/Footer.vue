@@ -120,13 +120,18 @@ a:hover {
         flex-direction: column;
         /* Stack sections vertically */
         align-items: center;
+        gap:2rem;
+    }
+
+    .email{
+        font-size: 1.5rem;
     }
 
     .contact,
     .links,
     .social {
         text-align: center;
-        margin-bottom: 20px;
+        flex:0%
     }
 }
 </style>

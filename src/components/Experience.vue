@@ -148,7 +148,14 @@ export default {
 @media (max-width: 768px) {
     .experience-content {
         grid-template-columns: 1fr;
+        width: fit-content;
         /* Single column on smaller screens */
+    }
+
+    .experience-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
     }
 }
 </style>

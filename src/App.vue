@@ -46,4 +46,10 @@ export default {
 #app {
   margin-inline: 8em;
 }
+
+@media (max-width: 768px) {
+  #app {
+    margin-inline: 2em;
+  }
+}
 </style>
