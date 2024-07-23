@@ -10,8 +10,8 @@ This is the source code for my personal portfolio website, built with [Vue.js](h
 
 ## ✨ Features
 
-- **Responsive Design:**  
-- **Interactive UI:** 
+- **Responsive Design**  
+- **Interactive UI** 
 ## 🛠️ Technologies Used
 
 - **Front-end:**

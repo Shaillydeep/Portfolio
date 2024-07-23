@@ -10,6 +10,61 @@ import excel from '../assets/excel.png';
 import react from '../assets/react.png';
 
 export default{
+    hero: {
+        textContent: "Shailly Deep",
+        subText: "Currently looking for opportunities",
+        desc: ["I'm an analyst based in New Delhi, India. "," Proficient in tools like Python, SQL, and advanced Excel."],
+        funFact: ["My other skills also include basic Front-end Web Development using React, Vue."," Fun Fact: This website is also built using Vue."],
+    },
+
+    carousel: {
+        images: [
+            python,
+            mysql,
+            powerBI,
+            excel,
+            react
+        ]
+    },
+
+
+    "projects": [
+        {
+            "title": "Hospital Patient Disease Data Analysis & Predictive Modelling",
+            "year": 2024,
+            "description": "I harnessed machine learning to predict 49 diseases based on a patient's symptoms, age, and sex. This project involved wrangling messy medical records, transforming data into a format the model could understand, and visualizing results to uncover patterns for more informed diagnoses.",
+            "outcome": "The predictive model achieved an accuracy of 98%. This high accuracy rate can help doctors make more informed decisions and provide better care to patients. The project also highlighted the potential of machine learning in healthcare to improve patient outcomes and reduce costs.",
+            "role": [
+                "Data Analyst",
+                " Machine Learning Engineer"
+            ],
+            "deliverables": [
+                "Data Wrangling",
+                "Feature Engineering",
+                "Model Training",
+                "Model Evaluation"
+            ],
+            "imagePath": hospitalDataAnalysis
+        },
+        {
+            "title": "Eateries Customer Segmentation",
+            "year": 2023,
+            "description": "This project highlights my ability to transform raw data into customer insights that can inform targeted marketing strategies. I used k-means clustering to segment student customers at on-campus eateries based on their spending habits and preferences. By wrangling data on purchases, I revealed four distinct student groups: budget-minded Chinese food lovers, students with a sweet tooth for snacks, those who splurge on fast food, and occasional diners.",
+            "outcome": "The insights from this project informed the dining services team on how to better target and engage with students. For example, they could create promotions for the budget-minded Chinese food lovers or offer new snack options for students with a sweet tooth.",
+            "role": [
+                "Data Analyst",
+                "Business Intelligence Analyst"
+            ],
+            "deliverables": [
+                "Data Wrangling",
+                "Exploratory Data Analysis",
+                "Customer Segmentation",
+                "Insights Presentation"
+            ],
+        }
+    ],
+
+
     "experience": [
         {
             "role": "Trainee Data Analyst",
@@ -53,48 +108,6 @@ export default{
         "Google Cloud Platform"
     ],
 
-    "projects": [
-        {
-            "title": "Hospital Patient Disease Data Analysis & Predictive Modelling",
-            "year": 2024,
-            "description": "I harnessed machine learning to predict 49 diseases based on a patient's symptoms, age, and sex. This project involved wrangling messy medical records, transforming data into a format the model could understand, and visualizing results to uncover patterns for more informed diagnoses.",
-            "outcome": "The predictive model achieved an accuracy of 98%. This high accuracy rate can help doctors make more informed decisions and provide better care to patients. The project also highlighted the potential of machine learning in healthcare to improve patient outcomes and reduce costs.",
-            "role": [
-                "Data Analyst",
-                " Machine Learning Engineer"
-            ],
-            "deliverables": [
-                "Data Wrangling",
-                "Feature Engineering",
-                "Model Training",
-                "Model Evaluation"
-            ],
-            "imagePath": hospitalDataAnalysis
-        },
-        {
-            "title": "Eateries Customer Segmentation",
-            "year": 2023,
-            "description": "This project highlights my ability to transform raw data into customer insights that can inform targeted marketing strategies. I used k-means clustering to segment student customers at on-campus eateries based on their spending habits and preferences. By wrangling data on purchases, I revealed four distinct student groups: budget-minded Chinese food lovers, students with a sweet tooth for snacks, those who splurge on fast food, and occasional diners.",
-            "outcome": "The insights from this project informed the dining services team on how to better target and engage with students. For example, they could create promotions for the budget-minded Chinese food lovers or offer new snack options for students with a sweet tooth.",
-            "role": [
-                "Data Analyst",
-                "Business Intelligence Analyst"
-            ],
-            "deliverables": [
-                "Data Wrangling",
-                "Exploratory Data Analysis",
-                "Customer Segmentation",
-                "Insights Presentation"
-            ],
-        }
-    ],
-
-    hero: {
-        textContent: "Shailly Deep",
-        subText: "Currently looking for opportunities",
-        desc: ["I'm an analyst based in New Delhi, India. "," Proficient in tools like Python, SQL, and advanced Excel."],
-        funFact: ["My other skills also include basic Front-end Web Development using React, Vue."," Fun Fact: This website is also built using Vue."],
-    },
 
     about: {
         greeting: ['Hi, I\'m Shailly!','A data analyst by day, a curious learner by night. I\'m always expanding my skillset and exploring new ways to leverage data for good.'],
@@ -105,20 +118,11 @@ export default{
         ],    
     },
 
+
     links: {
         linkedin: "https://www.linkedin.com/in/shailly-deep-481aa42b2/",
         github: "https://github.com/Shaillydeep",
         mailLink: "mailto:shaillydeep999@gmail.com",
         mail: " shaillydeep999@gmail.com"
-    }, 
-
-    carousel: {
-        images: [
-            python,
-            mysql,
-            powerBI,
-            excel,
-            react
-        ]
-    }
+    }    
 }
