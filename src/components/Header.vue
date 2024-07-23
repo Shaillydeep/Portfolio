@@ -2,6 +2,13 @@
   <header class="header">
     <div class="container">
       <nav class="nav">
+        <div class="drop-button">
+          <button class="drop-button" @click="toggleDropdown">
+            <img src="../assets/menu.png" alt="menu" class="menu">
+          </button>
+        </div>
+        <Transition name="slide-fade">
+        <div class="drop-menu">
         <div class="links">
           <a href="#Projects" class="link" @click.prevent="scrollToSection('Projects')">
             Work
@@ -16,10 +23,13 @@
             Skills
           </a>
         </div>
-        <button class="button" @click="scrollToSection('Footer')">
+        <button class="talk-button" @click="scrollToSection('Footer')">
           <span class="button-text">LET'S TALK</span>
           <img src="../assets/arrow.svg" alt="arrow" class="arrow">
         </button>
+        
+        </div>
+      </Transition>
       </nav>
     </div>
   </header>
@@ -27,6 +37,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isDropdownOpen: false
+    };
+  },
   methods: {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
@@ -36,12 +51,26 @@ export default {
           block: 'start'
         });
       }
+    },
+    toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen;
+      const dropMenu = document.querySelector('.drop-menu');
+      if (this.isDropdownOpen) {
+        dropMenu.style.display = 'flex';
+      } else {
+        dropMenu.style.display = 'none';
+      }
     }
   }
 };
 </script>
 
 <style scoped>
+
+.drop-button {
+  display: none;
+}
+
 .header {
   padding: 1em 0;
 }
@@ -78,7 +107,7 @@ export default {
   color: white;
 }
 
-.button {
+.talk-button {
   display: flex;
   align-items: center;
   background-color: #1D1D1D;
@@ -96,18 +125,56 @@ export default {
 
 }
 
+.drop-menu{
+  display: flex;
+  flex: auto;
+
+}
+
 /* Mobile Responsiveness (Example) */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
     /* Stack logo and links */
-    align-items: flex-start;
+    gap: 1em;
   }
 
   .links {
     flex-direction: column;
     gap: 1em;
     margin-top: 1em;
+
+  }
+
+  .drop-button {
+    display: block;
+    background-color: #1D1D1D;
+    border-radius: 2rem;
+    border: none;
+    border-width: 0;
+  }
+
+  .menu {
+    width: 20px;
+    padding: 0.5em;
+    align-items: center;
+  }
+
+
+  .drop-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
   }
 }
+
+.slide-fade-enter-active, .slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to /* .slide-fade-leave-active in <2.1.8 */ {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
 </style>
